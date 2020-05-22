@@ -72,10 +72,6 @@ class Member(models.Model):
     diretoria = models.NullBooleanField('Diretoria', default=False, null=True)
     thumb_image = models.CharField(
         'Thumbimage', max_length=100, null=True, blank=True)
-    municipio = models.ForeignKey('municipios.Municipio',
-                                  verbose_name=u"Município",
-                                  related_name="municipio_org_mun",
-                                  null=True, blank=True)
 
     def change_category(self):
         self.category = Category.objects.get(name="Efetivo")

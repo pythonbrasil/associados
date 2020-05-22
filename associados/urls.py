@@ -11,7 +11,6 @@ urlpatterns = [
     url(r'^payment/', include(payment_urls)),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^municipios_app/', include('municipios.urls')),
     url(r'^', include('django.contrib.auth.urls')),
 ]
 
